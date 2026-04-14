@@ -1,171 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyecto Git - Taller</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
 
-<style>
+    header, nav, main, section, footer { padding: 15px; }
 
-/* GENERAL */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #3498db, #2ecc71);
-}
-
-/* HEADER */
-header {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-nav {
-    background: #333;
-    text-align: center;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* SECCIONES */
-section {
-    background: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* FORMULARIO */
-input, textarea, button {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-}
-
-button {
-    background: #3498db;
-    color: white;
-    border: none;
-}
-
-/* TABLA */
-.tabla-container {
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background: #2980b9;
-    color: white;
-}
-
-/* FOOTER */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    section {
-        margin: 10px;
-        padding: 15px;
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
     }
 
-    h2 {
-        font-size: 20px;
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: space-around;
     }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* GALERÍA */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .item {
+      background: #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* FORMULARIO */
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    form input, form button {
+      padding: 8px;
+    }
+
+    /* TABLAS */
     table {
-        font-size: 12px;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
     }
-}
 
-</style>
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: #f4f4f4;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+    }
+
+    /* RESPONSIVIDAD */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        font-weight: bold;
+      }
+
+      td:nth-of-type(1)::before { content: "Nombre"; }
+      td:nth-of-type(2)::before { content: "Edad"; }
+      td:nth-of-type(3)::before { content: "Correo"; }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Proyecto Git y GitHub</h1>
+  <h1>Mi Página Web</h1>
+  <p>Ejemplo de estructura HTML semántica</p>
 </header>
 
 <nav>
-    <a href="#acerca">Acerca de</a>
-    <a href="#formulario">Formulario</a>
-    <a href="#tabla">Tabla</a>
+  <a href="#">Inicio</a>
+  <a href="#acerca">Acerca de</a>
+  <a href="#contacto">Contacto</a>
 </nav>
 
 <main>
 
-<!-- ACERCA -->
-<section id="acerca">
-    <h2>Acerca del Proyecto</h2>
-    <p>
-        Este proyecto permite aprender el uso de Git y GitHub como herramientas
-        de control de versiones, facilitando la gestión de cambios y el trabajo en equipo.
-    </p>
-</section>
+  <!-- ACERCA DE -->
+  <section id="acerca">
+    <h2>Acerca de</h2>
+    <p>Esta página integra tabla, formulario y galería con diseño responsivo.</p>
+  </section>
 
-<!-- FORMULARIO -->
-<section id="formulario">
+  <!-- FORMULARIO -->
+  <section id="contacto">
     <h2>Formulario</h2>
     <form>
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Correo">
-        <textarea placeholder="Mensaje"></textarea>
-        <button>Enviar</button>
+      <input type="text" placeholder="Nombre">
+      <input type="number" placeholder="Edad">
+      <input type="email" placeholder="Correo">
+      <button type="submit">Enviar</button>
     </form>
-</section>
+  </section>
 
-<!-- TABLA -->
-<section id="tabla">
-    <h2>Tabla de Datos</h2>
-    <div class="tabla-container">
-        <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Rol</th>
-                <th>Herramienta</th>
-            </tr>
-            <tr>
-                <td>Git</td>
-                <td>Control de versiones</td>
-                <td>Local</td>
-            </tr>
-            <tr>
-                <td>GitHub</td>
-                <td>Repositorio</td>
-                <td>Nube</td>
-            </tr>
-        </table>
+  <!-- TABLA GRANDE -->
+  <section>
+    <h2>Tabla de Datos Ficticios</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Ciudad</th>
+          <th>Profesión</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Ana Pérez</td><td>28</td><td>Quito</td><td>Ingeniera</td></tr>
+        <tr><td>2</td><td>Carlos Gómez</td><td>34</td><td>Guayaquil</td><td>Diseñador</td></tr>
+        <tr><td>3</td><td>María López</td><td>25</td><td>Cuenca</td><td>Arquitecta</td></tr>
+        <tr><td>4</td><td>Mauricio Janeta</td><td>40</td><td>Ambato</td><td>Profesor</td></tr>
+        <tr><td>5</td><td>Lucía Herrera</td><td>30</td><td>Guayaquil</td><td>Médica</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- GALERÍA -->
+  <section>
+    <h2>Galería</h2>
+    <div class="grid">
+      <div class="item">Elemento 1</div>
+      <div class="item">Elemento 2</div>
+      <div class="item">Elemento 3</div>
+      <div class="item">Elemento 4</div>
     </div>
-</section>
+  </section>
 
 </main>
 
 <footer>
-    <p>© 2026 Mi Sitio Web</p>
+  <p>© 2026 Mi Página Web</p>
 </footer>
 
 </body>
