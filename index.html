@@ -1,102 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejemplo Estructura Semántica</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
-    header, nav, main, section, footer { padding: 15px; }
-    header { background: #4CAF50; color: rgb(228, 177, 177); }
-    nav { background: #333; }
-    nav a { color: white; margin-right: 10px; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background: #f4f4f4; }
-    footer { background: #222; color: white; text-align: center; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Git - Taller</title>
+
+<style>
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+}
+
+/* HEADER */
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    background: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECCIONES */
+section {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FORMULARIO */
+input, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    border: none;
+}
+
+/* TABLA */
+.tabla-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #2980b9;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Mi Página Web</h1>
-  <p>Ejemplo de estructura HTML semántica</p>
+    <h1>Proyecto Git y GitHub</h1>
 </header>
 
 <nav>
-  <a href="#">Inicio</a>
-  <a href="#">Servicios</a>
-  <a href="#">Contacto</a>
+    <a href="#acerca">Acerca de</a>
+    <a href="#formulario">Formulario</a>
+    <a href="#tabla">Tabla</a>
 </nav>
 
 <main>
-  <section>
-    <h2>Tabla de Datos Ficticios</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Nombre</th>
-          <th>Edad</th>
-          <th>Ciudad</th>
-          <th>Profesión</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Ana Pérez</td>
-          <td>28</td>
-          <td>Quito</td>
-          <td>Ingeniera</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Carlos Gómez</td>
-          <td>34</td>
-          <td>Guayaquil</td>
-          <td>Diseñador</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>María López</td>
-          <td>25</td>
-          <td>Cuenca</td>
-          <td>Arquitecta</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Mauricio Janeta</td>
-          <td>40</td>
-          <td>Ambato</td>
-          <td>Profesor</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>Lucía Herrera</td>
-          <td>30</td>
-          <td>Guayaquil</td>
-          <td>Médica</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</main>
 
+<!-- ACERCA -->
+<section id="acerca">
+    <h2>Acerca del Proyecto</h2>
+    <p>
+        Este proyecto permite aprender el uso de Git y GitHub como herramientas
+        de control de versiones, facilitando la gestión de cambios y el trabajo en equipo.
+    </p>
+</section>
 
+<!-- FORMULARIO -->
+<section id="formulario">
+    <h2>Formulario</h2>
+    <form>
+        <input type="text" placeholder="Nombre">
+        <input type="email" placeholder="Correo">
+        <textarea placeholder="Mensaje"></textarea>
+        <button>Enviar</button>
+    </form>
+</section>
 
-</body>
-</html>
- <section>
-        <h2>Galería</h2>
-        <div class="grid">
-            <div class="item">Elemento 1</div>
-            <div class="item">Elemento 2</div>
-            <div class="item">Elemento 3</div>
-            <div class="item">Elemento 4</div>
-        </div>
-    </section>
+<!-- TABLA -->
+<section id="tabla">
+    <h2>Tabla de Datos</h2>
+    <div class="tabla-container">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Herramienta</th>
+            </tr>
+            <tr>
+                <td>Git</td>
+                <td>Control de versiones</td>
+                <td>Local</td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td>Repositorio</td>
+                <td>Nube</td>
+            </tr>
+        </table>
+    </div>
+</section>
 
 </main>
 
@@ -106,4 +170,3 @@
 
 </body>
 </html>
-
