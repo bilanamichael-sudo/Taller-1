@@ -1,0 +1,34 @@
+* 36c681c correccion de errores
+* 01e8097 correccion imagenes y readme
+* cb37846 imagenes correccion
+* 46016ef correccion erro
+* a5e2bb5 m
+*   209609f Merge pull request #6 from bilanamichael-sudo/estudiante-a
+|\  
+| * cc32b32 galeria
+|/  
+*   d6a9d58 Merge pull request #5 from bilanamichael-sudo/dev/estudiante-b
+|\  
+| * 614c020 fix: agregar estilos css
+* |   b24d662 Merge pull request #4 from bilanamichael-sudo/dev/estudiante-a
+|\ \  
+| * | 64b6307 Merge pull request #3 from bilanamichael-sudo/dev/estudiante-b
+| |\| 
+* | | 325769c Merge pull request #1 from bilanamichael-sudo/dev/estudiante-a
+|\| | 
+| * | 1ca709e estructura html
+* | |   d0213ba Merge pull request #2 from bilanamichael-sudo/dev/estudiante-b
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 5e3c88f estilos iniciales
+| *   4e7c0b0 Merge branch 'master' of https://github.com/bilanamichael-sudo/Taller-1
+| |\  
+| |/  
+|/|   
+* | 0dfacd7 inicio del taller
+* | 9d35cdd estudiante a html
+ /  
+* c10d2f1 inicio del taller
+* f88591b estudiante b style
